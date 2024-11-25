@@ -1,0 +1,6 @@
+I. ¿Compila exitosamente el siguiente programa? ¿Por qué?
+Sí, el programa compila exitosamente porque la clase derivada invoca correctamente al constructor de la clase base mediante el uso de su lista de inicialización. Esto es esencial, ya que unaVar es un atributo protegido que debe inicializarse en el constructor de la clase base.
+
+II. ¿Qué resultados se obtienen luego de su ejecución?
+El programa imprime:
+unaVar = 50

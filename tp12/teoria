@@ -1,0 +1,92 @@
+A- Respuestas
+1. Modificadores de acceso a atributos y métodos:
+Definición: Los modificadores de acceso son palabras clave que determinan la visibilidad y el nivel de acceso de los atributos y métodos de una clase en C++.
+Modificadores disponibles:
+public: Los atributos y métodos son accesibles desde cualquier parte del programa.
+private: Los atributos y métodos solo son accesibles desde dentro de la misma clase.
+protected: Los atributos y métodos son accesibles desde la clase misma y desde clases derivadas.
+Uso: Los modificadores de acceso controlan qué partes del programa pueden interactuar con atributos y métodos. Por ejemplo:
+
+class MiClase {
+private:
+    int atributoPrivado;
+public:
+    void setAtributo(int valor) { atributoPrivado = valor; }
+    int getAtributo() { return atributoPrivado; }
+};
+2. Constructor de clase:
+Definición: Es un método especial de una clase que se llama automáticamente cuando se crea un objeto de la clase.
+Propósito: Inicializar los atributos de un objeto y establecer un estado inicial.
+Definición en C++: Un constructor tiene el mismo nombre que la clase y no tiene tipo de retorno.
+
+class MiClase {
+public:
+    int atributo;
+    MiClase() { atributo = 0; } // Constructor
+};
+3. Destructor de clase:
+Definición: Es un método especial que se llama automáticamente cuando un objeto se destruye.
+Propósito: Liberar recursos asignados por el objeto, como memoria dinámica.
+Definición en C++: Un destructor tiene el mismo nombre que la clase, precedido de una tilde (~), y no tiene tipo de retorno.
+
+class MiClase {
+public:
+    ~MiClase() { /* Código para liberar recursos */ }
+};
+4. Partes private y public de una clase:
+Definición:
+private: Atributos y métodos accesibles solo dentro de la clase.
+public: Atributos y métodos accesibles desde cualquier parte del programa.
+Diferencias:
+private asegura la encapsulación; public proporciona una interfaz.
+Uso:
+
+class MiClase {
+private:
+    int atributoPrivado;
+public:
+    void setAtributo(int valor) { atributoPrivado = valor; }
+};
+5. Sobrecarga de métodos:
+Definición: Permite que varios métodos tengan el mismo nombre pero diferentes parámetros.
+Propósito: Mejorar la legibilidad y flexibilidad del código.
+Implementación:
+
+class MiClase {
+public:
+    void imprimir(int valor) { std::cout << valor; }
+    void imprimir(std::string valor) { std::cout << valor; }
+};
+6. Colaboración de clases:
+Definición: Es el proceso mediante el cual dos o más clases trabajan juntas para lograr un objetivo común.
+Propósito: Promover la reutilización y modularidad del código.
+Implementación:
+
+class ClaseA {
+public:
+    void metodoA() { std::cout << "ClaseA"; }
+};
+class ClaseB {
+public:
+    void metodoB(ClaseA& a) { a.metodoA(); }
+};
+7. Herencia:
+Definición: Es un mecanismo que permite a una clase (clase hija) heredar atributos y métodos de otra clase (clase base).
+Tipos de herencia:
+Simple.
+Múltiple.
+Jerárquica.
+Híbrida.
+Ventajas y desventajas:
+Ventajas: Reutilización de código, organización lógica.
+Desventajas: Complejidad y posibles conflictos en herencia múltiple.
+Implementación:
+
+class ClaseBase {
+public:
+    void metodoBase() { std::cout << "Base"; }
+};
+class ClaseHija : public ClaseBase {};
+8. Diferencia entre colaboración y herencia:
+Colaboración: Las clases interactúan como entidades independientes.
+Herencia: Una clase se basa en otra para extender o especializar su funcionalidad.
